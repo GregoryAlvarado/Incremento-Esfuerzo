@@ -128,20 +128,20 @@ with col1:
     calcular = st.button("Calcular", key="calcular")
 
 with col2:
-    st.markdown("### Solución de Boussinesq")
+    st.markdown("#### Ecuación de Boussinesq")
     st.latex(r"\sigma_z = \sum_{o}^{N} \frac{Sq}{2\pi} \left\{ \alpha - S' \tan^{-1}(B_1) - \tan^{-1}(B_2) + \frac{S' B_1 + B_2}{A^2 + 1} \right\}")
     st.latex(r"B_i = \frac{\sqrt{q_i^2 - 1}}{\sqrt{r_i^2 + 1}}, \quad (i = 1,2)")
 
-    st.markdown("### Solución de Westergaard")
+    st.markdown("#### Ecuación de Westergaard")
     st.latex(r"\sigma_z = \sum_{o}^{N} \frac{Sq}{2\pi} \left\{ \alpha - S' \tan^{-1}(W_1) - \tan^{-1}(W_2) \right\}")
     st.latex(r"W_i = k \frac{\sqrt{q_i^2 - 1}}{\sqrt{k^2 + r_i^2}}, \quad (i = 1,2)")
     st.latex(r"k = \text{constante}.")
 
-    st.markdown("### Solución de Fröhlich (χ = 2)")
+    st.markdown("#### Ecuación de Fröhlich (χ = 2)")
     st.latex(r"\sigma_z = \sum_{o}^{N} \frac{Sq}{2\pi} \left( \frac{1}{A^2 + 1} \right) \left\{ S' \tan^{-1} \left( \frac{E_1}{\sqrt{A^2 + 1}} \right) + \tan^{-1} \left( \frac{E_2}{\sqrt{A^2 + 1}} \right) \right\}")
     st.latex(r"E_i = \sqrt{q_i^2 - 1}, \quad (i = 1,2)")
 
-    st.markdown("### Solución de Fröhlich (χ = 4)")
+    st.markdown("#### Solución de Fröhlich (χ = 4)")
     st.latex(r"\sigma_z = \sum_{o}^{N} \frac{Sq}{2\pi} \left( \frac{1}{A^2 + 1} \right) \left\{ S' G_1 + G_2 \right\}")
     st.latex(r"G_i = \frac{3A^2 + 2}{\sqrt{A^2 + 1}} \tan^{-1} \left( \frac{\sqrt{q_i^2 - 1}}{\sqrt{A^2 + 1}} \right) + \frac{\sqrt{q_i^2 - 1}}{r_i^2 + 1}, \quad (i = 1,2)")
     
