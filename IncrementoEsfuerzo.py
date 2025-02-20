@@ -128,6 +128,7 @@ with col1:
     calcular = st.button("Calcular", key="calcular")
 
 with col2:
+    st.header("ECUACIONES")
     st.markdown("##### Ecuación de Boussinesq")
     st.latex(r"\small \sigma_z = \sum_{o}^{N} \frac{Sq}{2\pi} \left\{ \alpha - S' \tan^{-1}(B_1) - \tan^{-1}(B_2) + \frac{S' B_1 + B_2}{A^2 + 1} \right\}")
     st.latex(r"\small B_i = \frac{\sqrt{q_i^2 - 1}}{\sqrt{r_i^2 + 1}}, \quad (i = 1,2)")
