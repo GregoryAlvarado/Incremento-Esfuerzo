@@ -185,6 +185,7 @@ with col2:
         """)
 
 with col3:
+    st.header("GRÁFICOS")
     if calcular:
         st.markdown("---")
         
