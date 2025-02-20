@@ -154,8 +154,8 @@ with col3:
         polygon = np.array(vertices + [vertices[0]])
         ax.plot(polygon[:, 0], polygon[:, 1], 'bo-', label="Polígono",linewidth=4, markersize=6, linestyle="--")
         ax.plot(punto_analisis[0], punto_analisis[1], 'ro', label="Punto de análisis", markersize=14)
-        ax.set_xlim(left=-0.1)
-        ax.set_ylim(bottom=-0.1)
+        #ax.set_xlim(left=-0.1)
+        #ax.set_ylim(bottom=-0.1)
         
         ax.set_xlabel("X (m)", fontsize=18)
         ax.set_ylabel("Y (m)", fontsize=18)
