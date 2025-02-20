@@ -146,6 +146,26 @@ with col2:
         st.header("Resultados")
         st.dataframe(df_resultados, use_container_width=True)
 
+        st.markdown("### Referencias")
+        st.write("""
+        [1] Damy, J. and Casales, G. (1985). "Soil stresses under a polygonal area uniformly loaded"  
+        Proc. 11th Int. Conf. on Soil Mech. and Found. Engrg., ASCE, New York, N.Y., 2, 733-735.  
+
+        [2] Joseph Boussinesq (1842-1929). "Application des Potentiels à l'Étude de l'Équilibre et du Mouvement des Solides Élastiques",  
+        Gautier-Villars, Paris, 1885.  
+
+        [3] H.M. Westergaard, "A Problem of Elasticity Suggested by a Problem in Soil Mechanics,  
+        Soft Material Reinforced by Numerous Strong Horizontal Sheets", McMillan, 1939.  
+
+        [4] Leonardo Zeevaert W., "Interacción Suelo-Estructura", Limusa, 1980.  
+
+        [5] O.K. Frohlich. "Druckverteilung in Baugrunde" ("La repartición de presiones en suelos")  
+        Springer Verlag, Berlín, 1934.  
+
+        [6] N.M. Newmark, "Simplified Computation of Vertical Pressure in Elastic Foundations",  
+        Circular 24, Eng. Exp. Station, Universidad de Illinois, 1935.  
+        """)
+
 with col3:
     if calcular:
         st.markdown("---")
