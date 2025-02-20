@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Configuración de la página
-st.set_page_config(layout="wide", page_title="Cálculo de incremento de esfuerzo", page_icon=":chart_with_upwards_trend:")
+st.set_page_config(layout="wide")
 
-def calcular_parametros_comunes(vertices, punto_analisis):
+def calcular_parametros(vertices, punto_analisis):
     x0, y0 = punto_analisis
     parametros = []
 
@@ -33,7 +33,7 @@ def calcular_parametros_comunes(vertices, punto_analisis):
 def calcular_incremento_boussinesq(vertices, punto_analisis, q, z_max, dz):
     profundidades = np.arange(dz, z_max + dz, dz)
     esfuerzos = np.zeros_like(profundidades)
-    parametros = calcular_parametros_comunes(vertices, punto_analisis)
+    parametros = calcular_parametros(vertices, punto_analisis)
     
     for S, L, C1, C2, F in parametros:
         A = profundidades * L / abs(F)
@@ -51,7 +51,7 @@ def calcular_incremento_esfuerzo_westergaard(vertices, punto_analisis, q, z_max,
     K = np.sqrt((1 - 2 * v) / (2 * (1 - v)))
     profundidades = np.arange(dz, z_max + dz, dz)
     esfuerzos = np.zeros_like(profundidades)
-    parametros = calcular_parametros_comunes(vertices, punto_analisis)
+    parametros = calcular_parametros(vertices, punto_analisis)
     
     for S, L, C1, C2, F in parametros:
         A = profundidades * L / abs(F)
@@ -68,7 +68,7 @@ def calcular_incremento_esfuerzo_westergaard(vertices, punto_analisis, q, z_max,
 def calcular_incremento_frohlich(vertices, punto_analisis, q, z_max, dz, Xf):
     profundidades = np.arange(dz, z_max + dz, dz)
     esfuerzos = np.zeros_like(profundidades)
-    parametros = calcular_parametros_comunes(vertices, punto_analisis)
+    parametros = calcular_parametros(vertices, punto_analisis)
     
     for S, L, C1, C2, F in parametros:
         A = profundidades * L / abs(F)
